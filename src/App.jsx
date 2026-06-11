@@ -10,6 +10,10 @@ function App() {
   }
   const handleResult = () => {
     try {
+      if(inputValue.trim() === "") {
+        setResult("Error");
+        return;
+      }
       setResult(eval(inputValue));
     } catch (error) {
       setResult("Error");
